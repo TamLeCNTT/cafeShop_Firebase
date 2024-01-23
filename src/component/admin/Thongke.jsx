@@ -68,7 +68,7 @@ const Thongke = (props) => {
         props.logout();
         navitive("/");
         toast.info("Tài khoản đã hết hạn");
-      }, 300000);
+      }, 600000);
     let today = new Date();
     let datenew =
       today.getFullYear() +

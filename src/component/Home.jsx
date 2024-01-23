@@ -45,7 +45,7 @@ const Home = (props) => {
         props.logout();
         navitive("/");
         toast.info("Tài khoản đã hết hạn");
-      }, 30000);
+      }, 600000);
     let listshows = [];
     productService.getAllfirebase().then((res) => {
       setopt(Object.values(res.data).filter((item) => item !== null));
@@ -632,17 +632,17 @@ const Home = (props) => {
                       listcash.length > 0 &&
                       listshow[table] &&
                       listshow[table].trangthai == 3 && (
-                        // <Print
-                        //   content={listcash}
-                        //   id={table}
-                        //   OnclickCash={OnclickCash}
-                        // />
-                        <button
-                          className="btn btn-primary"
-                          onClick={() => OnclickCash()}
-                        >
-                          Oder
-                        </button>
+                        <Print
+                          content={listcash}
+                          id={table}
+                          OnclickCash={OnclickCash}
+                        />
+                        // <button
+                        //   className="btn btn-primary"
+                        //   onClick={() => OnclickCash()}
+                        // >
+                        //   Oder
+                        // </button>
                       )}
                   </div>
                   {!infirebase && listOdering && listOdering.length > 0 && (
