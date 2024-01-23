@@ -1,0 +1,34 @@
+table{
+    border-collapse:collapse
+}
+.product-table th{
+    background-color: #ccc;
+    font-weight: 700;
+}
+.product-table tr:hover td{
+    transition: all 0.25s ease;
+    background-color: aqua;
+}
+.align-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0px 10px
+}
+.product-content-top{
+    padding: 0 0 10px 0;
+}
+.border-radius{
+    border-radius: 13px !important;
+    max-width: 300px;
+}
+// Thoongs ke
+
+.thongke-date{
+    padding-bottom: 10px;
+    
+}
+.thongke-date-input{
+    display: flex;
+    margin-left: 10px !important;
+}

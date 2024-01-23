@@ -1,0 +1,36 @@
+#header{
+    background-color: rgba(40, 58, 90, 0.9);
+    text-decoration: none;
+}
+.nav-link{
+  color: aliceblue !important;
+}
+.navbar a{
+  color: black;
+  padding: 5px 10px!important;
+}
+.hover:hover {
+  background-color: #ccc;
+  color: white !important;
+  & .hovers{
+    background-color: #ccc;
+    color: white !important
+  }
+}
+.hovers {
+  width: inherit;
+}
+.test{
+    color: aliceblue !important;
+}
+.navbar  a {
+    
+    text-decoration: none;
+   
+  }
+  .mains{
+    margin-top:80px ;
+  }
+  .row-content:hover{
+    background-color: aqua  ;
+  }
