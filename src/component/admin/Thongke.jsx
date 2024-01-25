@@ -183,10 +183,11 @@ const Thongke = (props) => {
         });
       console.log(newarry);
       doangthunew = newarry.reduce(
-        (a, v) => (a = a + v.soluong * findproduct(list, v.productId).price),
+        (a, v) =>
+          (a = a + Number(v.soluong) * findproduct(list, v.productId).price),
         0
       );
-      soluongbannew = newarry.reduce((a, v) => (a = a + v.soluong), 0);
+      soluongbannew = newarry.reduce((a, v) => (a = a + Number(v.soluong)), 0);
       setdttheongay(doangthunew);
       setsoluonglytheongay(soluongbannew);
     });
@@ -215,10 +216,14 @@ const Thongke = (props) => {
           console.log(newarry);
           doangthunew = newarry.reduce(
             (a, v) =>
-              (a = a + v.soluong * findproduct(list, v.productId).price),
+              (a =
+                a + Number(v.soluong) * findproduct(list, v.productId).price),
             0
           );
-          soluongbannew = newarry.reduce((a, v) => (a = a + v.soluong), 0);
+          soluongbannew = newarry.reduce(
+            (a, v) => (a = a + Number(v.soluong)),
+            0
+          );
           setdttheothang(doangthunew);
           setsoluonglytheothang(soluongbannew);
         });
@@ -237,7 +242,7 @@ const Thongke = (props) => {
       let list = newarry;
       listidnew.map((item, index) => {
         let sl = list.filter((e) => e.productId == item);
-        soluongbannew.push(sl.reduce((a, v) => (a = a + v.soluong), 0));
+        soluongbannew.push(sl.reduce((a, v) => (a = a + Number(v.soluong)), 0));
       });
       setsoluongban(soluongbannew);
     });
@@ -287,7 +292,9 @@ const Thongke = (props) => {
         console.log(newarry, datenew);
         listidnew.map((item, index) => {
           let sl = newarry.filter((e) => e.productId == item);
-          soluongbannew.push(sl.reduce((a, v) => (a = a + v.soluong), 0));
+          soluongbannew.push(
+            sl.reduce((a, v) => (a = a + Number(v.soluong)), 0)
+          );
         });
         setsoluongban(soluongbannew);
       });
@@ -788,7 +795,7 @@ const Thongke = (props) => {
 
                                   <td>
                                     {item.data.reduce(
-                                      (a, v) => (a = a + v.soluong),
+                                      (a, v) => (a = a + Number(v.soluong)),
                                       0
                                     )}
                                   </td>
