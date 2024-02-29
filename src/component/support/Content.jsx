@@ -24,7 +24,6 @@ export const Content = React.forwardRef((props, ref) => {
           (e) => e != null && e.productID == item.productId
         )[0];
         if (product != null) {
-          console.log("hll");
           tong += Number(product.price) * Number(item.soluong);
         }
       });

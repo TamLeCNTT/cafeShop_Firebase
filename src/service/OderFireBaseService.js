@@ -17,7 +17,7 @@ class OderFireBaseService {
 }
   delete(data) {
    
-  const url = `/${SCHEMA}//${data.id}.json`;
+  const url = `/${SCHEMA}/${data.id}.json`;
   return axiosClient.delete(url, data);
 }
 }

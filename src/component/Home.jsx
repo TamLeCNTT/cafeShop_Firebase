@@ -201,11 +201,22 @@ const Home = (props) => {
       let listcashnew = listcash.filter(
         (item) => item.oderId != listcash[e].oderId
       );
+      console.log("ffjfjf", listcashnew);
+      if (!listcashnew.length) {
+        OderFireBaseService.delete({ id: table, data: listshow[table] }).then(
+          (res) => {
+            let listUpdate = listshow;
+            listUpdate[table].trangthai = 0;
+            setlistshow(listUpdate);
+          }
+        );
+      }
       OderFireBaseService.update({ id: table, data: listcashnew }).then(
         (res) => {
           toast.success("Xóa thành công");
         }
       );
+
       let listAffter = listshow;
       console.log(listAffter, listcash[e].oderId);
       listAffter[table].mes = listAffter[table].mes.filter(
