@@ -211,6 +211,7 @@ const Home = (props) => {
           }
         );
       }
+      else
       OderFireBaseService.update({ id: table, data: listcashnew }).then(
         (res) => {
           toast.success("Xóa thành công");
